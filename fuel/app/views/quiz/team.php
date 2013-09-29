@@ -1,4 +1,4 @@
-
+<? print_r($team); ?>
 <div class="span10 " style="margin-top:50px; margin-left:150px;min-height: 700px">
 
     <table id="tfhover" class="tftable" border="1">

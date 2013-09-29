@@ -41,6 +41,7 @@ class Controller_Quiz extends Controller_Template
         
         public function action_team()
 	{
+                                $data['team'] = Model_Team::find('all');
 		$data["subnav"] = array('index'=> 'active' );
 		$this->template->title = 'Quiz &raquo; Index';
 		$this->template->content = View::forge('quiz/team', $data);

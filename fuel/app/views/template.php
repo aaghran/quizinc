@@ -52,13 +52,7 @@
     </div>
     <div class="main row">
         <div class="col-xs-4 col-sm-1 sidebar-offcanvas pull-right"  style="margin-right:50px;margin-top:100px" id="sidebar" role="navigation">
-            <div class=" span2">
-                NITD LOGO
-            </div>
             <br />
-            <div class=" span2" style="margin-top:20px">
-                <a data-toggle="modal" href="#calender_modal"  class=""><div class="calendar"></div></a>
-            </div>
             <div class=" span2" style="margin-top:20px" >
                 <a data-toggle="modal" href="#facebook_modal" ><div class="facebook"></div></a>
             </div>
@@ -69,31 +63,7 @@
         <? echo $content; ?>
     </div>   
 
-    <div class="footer navbar navbar-inverse " style="margin-top:0px;width:100%;  padding: 20px 10px 0 10px">
-        <div class="container">
-            <div class="span12 " style="height: 200px;">
-                 </div>
-        </div>
-    </div>
     <!------ MODALS -->
-    <div class="modal fade " id="calender_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
-        <div class="modal-dialog span10">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">SCHEDULE</h4>
-                </div>
-                <div class="modal-body">
-                    <div id='loading' style='display:none'>loading...</div>
-                    <div id='calendar'></div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
 
     <div class="modal fade " id="facebook_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
         <div class="modal-dialog span5 offset4">
@@ -151,8 +121,7 @@
 <?php echo Asset::js('marquee.min.js'); ?>
    
 <script type="text/javascript">
-<!--
-    $('.marquee').marquee({
+   $('.marquee').marquee({
         //speed in milliseconds of the marquee  
         speed: 15000,
         //gap in pixels between the tickers  
@@ -162,26 +131,4 @@
         //'left' or 'right'  
         direction: 'left'
     });
-    $(document).ready(function() {
-
-        $('#calendar').fullCalendar({
-            // US Holidays
-            events: 'http://www.google.com/calendar/embed?src=ZXBsXzYxNTdfJTRkYW5jaGVzdGVyKyU1NW5pdGVkI3Nwb3J0c0Bncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20',
-            eventClick: function(event) {
-                // opens events in a popup window
-                window.open(event.url, 'gcalevent', 'width=700,height=500');
-                return false;
-            },
-            loading: function(bool) {
-                if (bool) {
-                    $('#loading').show();
-                } else {
-                    $('#loading').hide();
-                }
-            }
-
-        });
-
-    });
-
 </script>
