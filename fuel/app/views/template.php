@@ -12,47 +12,22 @@
         <?php echo Asset::js('jquery.js'); ?>
         <?php echo Asset::js('bootstrap.js'); ?>
     </head>
-
+<style type="text/css">
+#basicCube { width: 100px; height: 150px; }
+</style>
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
     <div id="fb-root"></div>
     <!-- Navbar
     ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#" style="padding-top:20px"><span style="font-size:30px">QUIZINC</span><br /><span style="font-size:10px">We add the zing to Quizzing!</span></a>
-            </div>
-            <div class="navbar-collapse collapse" style="padding-top:20px">
-                <ul class="nav navbar-nav ">
-                    <div class="span2"></div>
-                    <li><a href="#">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quizzes <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Season</a></li>
-                            <li><a href="#">Online</a></li>
-                            <li><a href="#">Flyers</a></li>
-                            <li class="divider"></li>
-                            <li class="dropdown-header">About Us</li>
-                        </ul>
-                    </li>
-                    <li><a href="">Quizzitch Cup</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-                <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control">
-                    </div>
-                    <button type="submit" class="btn btn-success">Subscribe</button>
-                </form>
-            </div><!--/.navbar-collapse -->
-            <div class="marquee">Lorem ipsum dolor sit amet, consectetur adipiscing elit END.</div> 
-        </div>
-    </div>
     <div class="main row">
         <div class="col-xs-4 col-sm-1 sidebar-offcanvas pull-right"  style="margin-right:50px;margin-top:100px" id="sidebar" role="navigation">
             <br />
+            <div id="basicCube" >
+	<img src="http://keith-wood.name/img/uluru.jpg" alt="Uluru" title="Uluru">
+	<img src="http://keith-wood.name/img/islands.jpg" alt="Islands" title="Islands">
+	<img src="http://keith-wood.name/img/gorge.jpg" alt="Gorge" title="Gorge">
+</div>
+
             <div class=" span2" style="margin-top:20px" >
                 <a data-toggle="modal" href="#facebook_modal" ><div class="facebook"></div></a>
             </div>
@@ -116,19 +91,13 @@
         js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-<?php echo Asset::js('fullcalendar.min.js'); ?>
-<?php echo Asset::js('gcal.js'); ?>
+
 <?php echo Asset::js('marquee.min.js'); ?>
-   
+<?php echo Asset::js('jquery.imagecube.js'); ?>
+
 <script type="text/javascript">
-   $('.marquee').marquee({
-        //speed in milliseconds of the marquee  
-        speed: 15000,
-        //gap in pixels between the tickers  
-        gap: 50,
-        //gap in pixels between the tickers  
-        delayBeforeStart: 0,
-        //'left' or 'right'  
-        direction: 'left'
-    });
+$(function () {
+	$('#basicCube').imagecube();
+});
+
 </script>

@@ -7,7 +7,7 @@ class Model_Team extends \Orm\Model {
         'id',
         'name',
         'email',
-        'phone',
+        'post',
         'year',
         'photo',
         'created_at',

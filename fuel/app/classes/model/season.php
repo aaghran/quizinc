@@ -23,7 +23,7 @@ class Model_Season extends \Orm\Model {
         'team3_3',
         'photo_small',
         'photo_large',
-        'slides_id',
+        'slides',
         'created_at',
         'updated_at',
     );
@@ -37,6 +37,6 @@ class Model_Season extends \Orm\Model {
             'mysql_timestamp' => false,
         ),
     );
-    protected static $_table_name = 'teams';
+    protected static $_table_name = 'seasons';
 
 }
